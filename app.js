@@ -1,7 +1,15 @@
 const express = require("express");
-
 const app = express();
+const port = 8000;
 
-app.listen(8000, () => {
-  console.log("This server is working Hydration");
+app.get("/", (req, res) => {
+  res.send({
+    name: "bob Bobson",
+    job: "rocket pilot",
+    GPA: "1.39",
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Bob Bobson`);
 });
